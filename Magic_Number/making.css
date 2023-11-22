@@ -1,0 +1,124 @@
+
+.main-box{
+    border:10px solid #000;
+    margin-left: 400px;
+    margin-top: 100px;
+    margin-right: 400px;
+    margin-bottom: 100px;
+}
+
+* {
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: main-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+  }
+  .waviy {
+    position: relative;
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bolder;
+    color: red;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i))
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+
+
+
+  .pop-outin {
+    animation: 2s anim-popoutin ease infinite;
+  }
+  
+  @keyframes anim-popoutin {
+    0% {
+      color: violet;
+      transform: scale(0);
+      opacity: 0;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+      color: blue;
+      transform: scale(2);
+      opacity: 1;
+      text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      color: violet;
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      /* animate nothing to add pause at the end of animation */
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  
+  .fromtop {
+    animation: 2s anim-fromtop linear infinite;
+  }
+  @keyframes anim-fromtop {
+    0% { opacity: 0; transform: translateY(-100%);}
+    25% { opacity: 1; transform: translateY(0%);}
+    50% {
+    }
+    100% {
+    }
+  }
+
+.header {
+    border-bottom:1px solid #eaeaea;
+}
+body{
+
+    background-image: linear-gradient(150deg,
+    #beef00 33.3%,
+    #f75990 33.3%, #fff685 66.6%,
+    #00DDFF 66.6%, #0049B7 99.9%);
+}
+
+.button {
+  border:#edf756;
+  color:lightyellow;
+  padding: 8px 170px;
+  text-align: center;
+  box-align: center;
+  text-decoration:solid;
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+  background-image: linear-gradient(150deg,
+  #e1b382,#c89666, #2d545e,#12343b);
+}
+
+.but {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #7aa8b7;
+  border-radius: 40px;
+  outline: none;
+  transition: 0.7s;
+}
+.but:hover {
+  background-color: #c2c7c7;
+}
